@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6bE-KA-i2S">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4yR-mc-azv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6bE-KA-i2S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ook-K1-g23">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="sI6-b2-96D" kind="relationship" relationship="rootViewController" id="Htv-N7-w4U"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1pC-ow-prn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-60.305343511450381" y="26.760563380281692"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="uWM-Yu-eEh">
+            <objects>
+                <collectionViewController id="sI6-b2-96D" customClass="CategoriesCollectionViewController" customModule="ThatMeal_MVVMC" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="rcw-Va-aiN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96862751250000001" green="0.96862751250000001" blue="0.96862751250000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4BB-Cr-Qid">
+                            <size key="itemSize" width="185" height="190"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="2j4-KE-Hlw" customClass="CategoriesCollectionViewCell" customModule="ThatMeal_MVVMC" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="185" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AXt-iF-Zs9">
+                                    <rect key="frame" x="0.0" y="0.0" width="185" height="190"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="M4i-v0-9cT" customClass="ServiceRequestImageView" customModule="ThatMeal_MVVMC" customModuleProvider="target">
+                                            <rect key="frame" x="20" y="0.0" width="145" height="150"/>
+                                            <color key="tintColor" systemColor="labelColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="150" id="MVn-aE-23E"/>
+                                                <constraint firstAttribute="width" constant="150" id="X6m-PX-0N5"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WyO-aC-dBm">
+                                            <rect key="frame" x="6" y="150" width="173" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="l0g-bc-jRH"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="M4i-v0-9cT" secondAttribute="trailing" constant="20" id="4u0-3U-7Yy"/>
+                                        <constraint firstItem="WyO-aC-dBm" firstAttribute="top" secondItem="M4i-v0-9cT" secondAttribute="bottom" id="Ckh-V5-SHK"/>
+                                        <constraint firstItem="WyO-aC-dBm" firstAttribute="leading" secondItem="AXt-iF-Zs9" secondAttribute="leading" constant="6" id="N79-dR-ziq"/>
+                                        <constraint firstItem="M4i-v0-9cT" firstAttribute="top" secondItem="AXt-iF-Zs9" secondAttribute="top" id="NnD-F0-fXo"/>
+                                        <constraint firstAttribute="trailing" secondItem="WyO-aC-dBm" secondAttribute="trailing" constant="6" id="Rqz-AP-5iL"/>
+                                        <constraint firstItem="M4i-v0-9cT" firstAttribute="leading" secondItem="AXt-iF-Zs9" secondAttribute="leading" constant="20" id="db9-V6-QZA"/>
+                                        <constraint firstAttribute="bottom" secondItem="WyO-aC-dBm" secondAttribute="bottom" id="nB4-ba-6mU"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="185" height="190"/>
+                                <connections>
+                                    <outlet property="categoryImageServiceRequestImageView" destination="M4i-v0-9cT" id="z0C-if-IRN"/>
+                                    <outlet property="categoryNameLabel" destination="WyO-aC-dBm" id="rBS-nX-h8s"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="sI6-b2-96D" id="8vD-WY-3QH"/>
+                            <outlet property="delegate" destination="sI6-b2-96D" id="vaa-gL-4rO"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" title="Categories" id="TF6-7W-SgY"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BaD-a5-FT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="693.89312977099235" y="26.760563380281692"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
